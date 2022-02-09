@@ -1,3 +1,100 @@
 <resources>
     <string name="app_name">BettApplication</string>
+    <string name="favorite_button_description">Favorite button</string>
+    <string name="toolbar_favorite_button_title">Favorites</string>
+    <string name="first_strategy_title">Sports betting on cup games</string>
+    <string name="second_strategy_title"> Betting on late goals</string>
+    <string name="third_strategy_title"> Betting on a draw</string>
+    <string name="fourth_strategy_title">The Fibonacci betting system</string>
+    <string name="fifth_strategy_title"> The Kelly formula</string>
+    <string name="sixth_strategy_title"> Early cashout in sports betting</string>
+
+    <string name="first_strategy_url"> http://gamesground.ru/uploads/posts/2021-05/1621847872_78956542.jpg </string>
+    <string name="second_strategy_url"> https://photoshablon.com/foto_statji_6/705_1.jpg </string>
+    <string name="third_strategy_url"> https://i.pinimg.com/736x/ef/da/79/efda79d3b757b9876cfb9d9a3dd2fc52.jpg</string>
+    <string name="fourth_strategy_url"> https://www.bukbusters.pl/sites/default/files/tutorial-galeria/Ciag-fibonacciego.jpg</string>
+    <string name="fifth_strategy_url"> https://vietradeportal.vn/phuong-phap-quan-ly-von-kelly/imager_1_40477_700.jpg</string>
+    <string name="sixth_strategy_url"> https://i.gyazo.com/2cc391958779524f697c7076ff53b513.png</string>
+
+    <string name="first_strategy_body">
+        As a matter of principle,
+        I don’t bet on cup games”; the above is often heard, but never really understood,
+        because spectacular cup fights in particular offer so many opportunities for the sports bettor.
+        It is not uncommon for David to meet Goliath. In relation to the big club, it is not rarely an annoying duty,
+        but for the small club it is the undisputed game of the year.
+        And thus, now and then, there is the chance to win good odds and value bets.
+        It can be worthwhile to prepare more closely for cup games. In times of YouTube and dynamic club websites,
+        it is in many cases not a problem to follow the press conference before the game;
+        which players will be included in the squad for the game? Which regular players or even stars are spared?
+        Is the second goalkeeper playing? Will young players get their chance?
+        All of the above are interesting questions when looking for a lucrative bet.
+
+        Of course, it always depends on the club’s approach – cup games are always a question of mentality.
+        It is therefore a good idea to analyze the past few weeks.
+        Does a larger club need to rehabilitate for weak games within the past weeks and maybe would like to let off steam on a “little one” in the cup? How cup-affine is a club in general?
+        There are enough examples of quite large clubs that have suffered from a cup curse for years or even decades.
+        Yes, in fact there is hardly any other even, where you there are more to analyze than in cup competitions.
+        The advantage, however, is that there will be numerous bets that, on closer inspection, will pass as value bets.
+        Even if the bookmakers, probably because they cannot plan and pre-analyze every game themselves,
+        keep the odds lower in the cup and pay a lower commission.
+    </string>
+    <string name="second_strategy_body">  For example in relation to late goals betting,
+        look for games with a clear favourite with 3-way winning odds of less than 1.30.
+        In a betting round, spread the risk over as many games as possible;
+        obviously, there will always be some unexpected losses.
+        Then, bet on late goals for each of these games.
+        Most bookmakers offer these bets under the name “Last goal will be in minutes 76-90”.
+        Statistically, you will win just under 60% of all of these bets.  </string>
+
+    <string name="third_strategy_body"> A tie is not the most popular bet out there.
+        If only, because it is much more fun to celebrate a team’s victory.
+        Another quick and easy way to identify potential ties is to check the Asian handicap odds.
+
+        Look for games in which the handicap was set to zero (0) or a draw.
+        This means that both teams have been rated more or less equally,
+        and the bookmakers do not want to give either team a head start.
+        Games like these tend to end in a draw more often than you might think.
+    </string>
+
+    <string name="fourth_strategy_body">The Fibonacci betting system is one of many betting strategies available today.
+         Here we explain what it is all about.
+         The Fibonacci betting strategy
+
+         Fibonacci sequence betting is undoubtedly a controversial concept.
+        But there are definitely sports bettors who were able to achieve great success with it.
+        This strategy carries some risks, but with the necessary luck and the right nose, you can be successful while employing this strategy.
+
+        The basic concept of betting according to the Fibonacci sequence is simple: bet on a tie.
+        If you lose, just bet on the next tie according to a certain key and start increasing your stake. </string>
+
+    <string name="fifth_strategy_body"> There are of course numerous ideas,
+        concepts and formulas that can help you calculate the ideal stake on a bet. One of them is the Kelly formula.
+
+        Of course, this is no guarantee that you will always bet correctly and the assessment of how likely the outcome of a game is,
+        does still remain up to you.
+        But the Kelly formula can help you choose the size of your bet.
+
+        This is how the Kelly formula works
+
+        You choose a game or an event and rate the outcome as a percentage
+        Example: Austria defeats Germany – you rate this outcome with a probability of 20%
+        Now, you are looking for an odd for this event that seems fair to you
+        Then, you put the probability and the odds in the Kelly formula and get a value from it
+        The Kelly Formula hereby recommends that, given the probability that you have determined yourself and the odds you have chosen,
+        you should bet 2.22% of your bankroll on this event.
+    </string>
+
+    <string name="sixth_strategy_body">  Have you ever regretted placing a particular bet and wished that you could somehow withdraw it?
+        Or maybe you had doubts as to whether the team you supported could really hold the lead?
+        If your answer to any of the questions is yes, then you’ll love the early withdrawal option.
+        These properties give the speculator more control over the bets already placed and could ultimately make a big difference in the overall bankroll if you wager your cards correctly.
+        The early payout is often referred to as the cashout by most sports betting sites.
+
+        What is the early withdrawal option?
+
+        The early withdrawal option allows sports bettors to withdraw their bets early,
+        before they have been settled. So, you can either make a profit or get a part of your stake back,
+        depending on your selection at that time. The feature is available as soon as you have placed your pre-match
+        or in-play bet and the payout amount will fluctuate based on the events taking place in the game.   </string>
+
 </resources>
