@@ -20,8 +20,6 @@ class HomeFragmentViewModel(
     private val _onStrategyChecked: MutableStateFlow<Event<String>> = MutableStateFlow(Event(""))
     val onStrategyChecked: StateFlow<Event<String>> = _onStrategyChecked
 
-//    private val _preloadImg: Flow<Event<String>> = (Event(""))
-//    val preloadImg: StateFlow<Event<String>> = _preloadImg
 
     private val _bettingStrategies: Flow<List<RecyclerViewItemModel>> =
         combine(onlyFavoritesMode, localRepository.getAllStrategies()) { isOnlyFavoritesMode, entityList ->
@@ -37,8 +35,7 @@ class HomeFragmentViewModel(
                     imageURL = entity.imageURL,
                     body = entity.body,
                     isFavorite = entity.isFavorite,
-                    listener = sendListener(),
-                    null
+                    listener = sendListener()
                 )
             }
         }.flowOn(Dispatchers.IO)
@@ -65,8 +62,7 @@ class HomeFragmentViewModel(
                                 title = strategy.title,
                                 imageURL = strategy.imageURL,
                                 body = strategy.body,
-                                isFavorite = !strategy.isFavorite,
-                                strategy.bitmap
+                                isFavorite = !strategy.isFavorite
                             )
                         )
                     }
@@ -84,8 +80,7 @@ class HomeFragmentViewModel(
                 title = titles[i],
                 imageURL = urls[i],
                 body = bodies[i],
-                isFavorite = false,
-                null
+                isFavorite = false
             ))
         }
 

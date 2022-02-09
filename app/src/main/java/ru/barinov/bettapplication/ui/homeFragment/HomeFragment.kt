@@ -105,38 +105,35 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
 
         lifecycleScope.launchWhenCreated {
-            withContext(Dispatchers.Main) {
-                viewModel.profilesData.onEach { list ->
-                    list.onEach { item->
-                        withContext(Dispatchers.IO) {
-                            Glide.with(requireContext()).asBitmap().load(item.imageURL)
-                                .into(object : CustomTarget<Bitmap>() {
-                                    override fun onResourceReady(
-                                        resource: Bitmap, transition: Transition<in Bitmap>?
-                                    ) {
-                                        item.bitmap = resource.scaledImageFromBitmap(
-                                            resource,
-                                            imageScaleBase,
-                                            requireContext().resources.displayMetrics.density
-                                        )
-                                    }
+            viewModel.profilesData.onEach { list ->
+                list.onEach { item ->
+                    withContext(Dispatchers.IO) {
+                        Glide.with(requireContext()).asBitmap().load(item.imageURL)
+                            .into(object : CustomTarget<Bitmap>() {
+                                override fun onResourceReady(
+                                    resource: Bitmap, transition: Transition<in Bitmap>?
+                                ) {
+                                    item.bitmap = resource.scaledImageFromBitmap(
+                                        resource,
+                                        imageScaleBase,
+                                        requireContext().resources.displayMetrics.density
+                                    )
+                                }
 
-                                    override fun onLoadCleared(placeholder: Drawable?) {
-                                        item.bitmap = placeholder!!.toBitmap()
+                                override fun onLoadCleared(placeholder: Drawable?) {
+                                    item.bitmap = placeholder!!.toBitmap()
 
-                                    }
-                                })
-                            withContext(Dispatchers.Main){
-                                adapter.setList(list)
-                            }
-                        }
-
+                                }
+                            })
                     }
 
-                }.collect()
-            }
-        }
+                }
+                withContext(Dispatchers.Main) {
+                    adapter.setList(list)
+                }
 
+            }.collect()
+        }
     }
 
     private fun fillDataBase() {

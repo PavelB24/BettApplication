@@ -12,6 +12,5 @@ data class BettingStrategyEntity(
     val imageURL: String,
     val body: String,
     val isFavorite: Boolean,
-    var bitmap: Bitmap?
     )
 
