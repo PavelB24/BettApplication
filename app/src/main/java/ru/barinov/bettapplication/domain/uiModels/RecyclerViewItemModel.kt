@@ -1,4 +1,4 @@
-package ru.barinov.bettapplication.ui.uiModels
+package ru.barinov.bettapplication.domain.uiModels
 
 import android.graphics.Bitmap
 import ru.barinov.bettapplication.ui.ItemListener
@@ -10,5 +10,4 @@ data class RecyclerViewItemModel(
     val body: String,
     val isFavorite: Boolean,
     val listener: ItemListener,
-    var bitmap: Bitmap? = null
 )

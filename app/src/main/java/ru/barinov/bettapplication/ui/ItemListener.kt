@@ -1,6 +1,6 @@
 package ru.barinov.bettapplication.ui
 
-import ru.barinov.bettapplication.ui.uiModels.RecyclerViewItemModel
+import ru.barinov.bettapplication.domain.uiModels.RecyclerViewItemModel
 
 interface ItemListener {
 

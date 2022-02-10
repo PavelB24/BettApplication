@@ -1,11 +1,18 @@
 package ru.barinov.bettapplication.ui
 
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.view.*
 import androidx.recyclerview.widget.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import ru.barinov.bettapplication.R
-import ru.barinov.bettapplication.core.DiffCallback
+import ru.barinov.bettapplication.core.*
 import ru.barinov.bettapplication.databinding.BettingStrategyItemLayoutBinding
-import ru.barinov.bettapplication.ui.uiModels.RecyclerViewItemModel
+import ru.barinov.bettapplication.domain.uiModels.RecyclerViewItemModel
+
+private const val imageScaleBase = 75
 
 class RecyclerViewAdapter : RecyclerView.Adapter<BettingStrategyViewHolder>() {
 
@@ -27,7 +34,21 @@ class RecyclerViewAdapter : RecyclerView.Adapter<BettingStrategyViewHolder>() {
         }
 
         holder.titleTextView.text = item.title
-        holder.imageView.setImageBitmap(item.bitmap)
+        Glide.with(holder.itemView.context).asBitmap().load(item.imageURL)
+            .into(object : CustomTarget<Bitmap>() {
+                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+                    val scaledBitMap = resource.scaledImageFromBitmap(
+                        resource,
+                        imageScaleBase,
+                        holder.itemView.context.resources.displayMetrics.density
+                    )
+                    holder.imageView.setImageBitmap(scaledBitMap)
+                }
+
+                override fun onLoadCleared(placeholder: Drawable?) {
+                }
+            })
+
 
         holder.itemView.setOnClickListener { item.listener.onItemClicker(item.id) }
         holder.favoriteButton.setOnClickListener { item.listener.onFavoriteButtonChecked(item) }

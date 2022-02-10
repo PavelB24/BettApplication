@@ -1,7 +1,7 @@
 package ru.barinov.bettapplication.core
 
 import androidx.recyclerview.widget.DiffUtil
-import ru.barinov.bettapplication.ui.uiModels.RecyclerViewItemModel
+import ru.barinov.bettapplication.domain.uiModels.RecyclerViewItemModel
 
 class DiffCallback(
     private var oldList: List<RecyclerViewItemModel>,

@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import kotlinx.coroutines.*
@@ -26,7 +27,7 @@ import ru.barinov.bettapplication.ui.RecyclerViewAdapter
 import ru.barinov.bettapplication.databinding.HomeFragmentLayoutBinding
 
 private const val FIRST_LAUNCH_KEY = "fistLaunchKey"
-private const val imageScaleBase = 75
+
 
 class HomeFragment : Fragment() {
 
@@ -107,31 +108,10 @@ class HomeFragment : Fragment() {
         lifecycleScope.launchWhenCreated {
             viewModel.profilesData.onEach { list ->
                 list.onEach { item ->
-                    withContext(Dispatchers.IO) {
-                        Glide.with(requireContext()).asBitmap().load(item.imageURL)
-                            .into(object : CustomTarget<Bitmap>() {
-                                override fun onResourceReady(
-                                    resource: Bitmap, transition: Transition<in Bitmap>?
-                                ) {
-                                    item.bitmap = resource.scaledImageFromBitmap(
-                                        resource,
-                                        imageScaleBase,
-                                        requireContext().resources.displayMetrics.density
-                                    )
-                                }
-
-                                override fun onLoadCleared(placeholder: Drawable?) {
-                                    item.bitmap = placeholder!!.toBitmap()
-
-                                }
-                            })
+                    withContext(Dispatchers.Main) {
+                        adapter.setList(list)
                     }
-
                 }
-                withContext(Dispatchers.Main) {
-                    adapter.setList(list)
-                }
-
             }.collect()
         }
     }

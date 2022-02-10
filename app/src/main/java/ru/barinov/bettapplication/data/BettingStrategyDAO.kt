@@ -16,4 +16,5 @@ interface BettingStrategyDAO {
 
     @Query("SELECT * FROM betting_strategy_table WHERE id =:id")
     fun getSelectedStrategy(id: String): Flow<BettingStrategyEntity>
+
 }

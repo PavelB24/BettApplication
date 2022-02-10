@@ -8,7 +8,7 @@ import ru.barinov.bettapplication.core.Event
 import ru.barinov.bettapplication.data.BettingStrategyRepository
 import ru.barinov.bettapplication.domain.BettingStrategyEntity
 import ru.barinov.bettapplication.ui.ItemListener
-import ru.barinov.bettapplication.ui.uiModels.RecyclerViewItemModel
+import ru.barinov.bettapplication.domain.uiModels.RecyclerViewItemModel
 
 class HomeFragmentViewModel(
     private val localRepository: BettingStrategyRepository
